@@ -1,0 +1,6 @@
+   # Day 1 - 2026-10-05
+   Topic:     lists and dicts
+   Built:     two_sum, is_anagram, word_count, dedupe, transpose, merge_dicts
+   Learned:   start with an empty container, loop, check with if, return after the loop
+   Stuck on:  indentation, and the loop inside a loop in transpose
+   Tomorrow:  comprehensions and strings
