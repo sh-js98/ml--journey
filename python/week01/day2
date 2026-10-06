@@ -1,0 +1,20 @@
+def duplicate_numbers(numbers):
+ seen = []
+ duplicate = []
+ for num in numbers:
+    if num in seen:
+        duplicate.append(num)
+    else:
+        seen.append(num)
+ return duplicate
+def is_palindrome(text):
+    real = ""
+    for ch in text.lower():
+        if ch.isalnum():
+            real += ch
+    return real == real[::-1]
+word = "racecar"
+print("duplicate numbers are : ", duplicate_numbers([1, 2 ,4 , 2, 4, 6]))
+print(word[::-1])
+print("The word is palindrome :", is_palindrome(word))
+
