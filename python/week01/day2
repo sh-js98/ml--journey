@@ -18,3 +18,11 @@ print("duplicate numbers are : ", duplicate_numbers([1, 2 ,4 , 2, 4, 6]))
 print(word[::-1])
 print("The word is palindrome :", is_palindrome(word))
 
+numbers = [1, 2, 3, 4, 5, 6]
+words = ["apple", "fig", "banana", "kiwi"]
+line = "  The Cat Sat On The Mat  "
+print("even numbers are : ", [num for num in numbers if num % 2 == 0])
+print("Capitalized words are : ", [word.capitalize() for word in words])
+print("Words longer than 3 letters: ", [word for word in words if len(word)>3])
+print("Lowercase with outer space removed: ", line.strip().lower())
+print("wordlist glued with "," between:", ",".join(words))
