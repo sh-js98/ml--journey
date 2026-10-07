@@ -7,5 +7,10 @@ def parse_price_line(line):
         "symbol": parts[1].strip(),
         "price": float(parts[2].strip())
             }
-print(parse_price_line("hello"))
 print(parse_price_line("2023-01-01, AAPL, 150.00"))
+def simple_return(prices):
+    returns = []
+    for i in range (1, len(prices)):
+      returns.append(prices[i] / prices[i-1] - 1)
+    return returns
+print(simple_return([100, 110, 120]))
