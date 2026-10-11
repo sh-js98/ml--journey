@@ -31,6 +31,20 @@ rows = [
     {"date": "2023-01-01", "symbol": "MSFT", "price": 240.0},
     {"date": "2023-01-02", "symbol": "AAPL", "price": 153.0},
 ]
+def top_words(text, n):
+    counts = {}
+    for word in text.lower().split():
+        word = word.strip(",.!?;")
+        if word in counts:
+            counts[word] += 1
+        else:
+            counts[word] = 1
+
+    pairs = sorted(counts.items(), key=lambda pair: pair[1], reverse=True)
+    return pairs[:n]
+
+ 
 print(simple_return([100, 110, 120]))
 print(parse_price_lines(["2023-01-01, AAPL, 150.00", "2023-01-02, AAPL, 153.00"]))
 print(group_prices_by_symbol(rows))
+print(top_words("the cat saw the dog and the bird", 3))
